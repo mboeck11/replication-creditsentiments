@@ -8,3 +8,7 @@ saves/*.rda
 saves/*.RData
 
 .Renviron
+
+.gitignore
+
+.DS_store
