@@ -1,0 +1,10 @@
+.rda
+.RData
+.Rhistory
+.Rapp.history
+.RDataTmp
+
+saves/*.rda
+saves/*.RData
+
+.Renviron
