@@ -1,9 +1,9 @@
 # replication-creditsentiments
 
 
-Replication files for Böck, M. and T. O. Zörner (2021) *The Impact of Credit Market Sentiment Shocks*
+Replication files for Boeck, M. and Zörner, T. O. (2023)
 =======
-Replication files for Böck, M. and T. O. Zörner (2022) *The Impact of Credit Market Sentiment Shocks*.
+Replication files for Boeck, M. and Zörner, T. O. (2023) *The Impact of Credit Market Sentiment Shocks*, Journal of Money, Credit and Banking, forthcoming.
 
 In order to reproduce all the graphics visible in the paper, just run **main.r** in the *scripts* folder. Estimations are based on 25.000 MCMC draws where the first 15.000 are discarded. Hence, the script takes a considerable amount of time to run through. The number of saved draws (*draws*) and discared draws (*burnins*) can be adapted by the user. The script then reproduces the following
 
@@ -18,10 +18,12 @@ In order to reproduce all the graphics visible in the paper, just run **main.r**
   + Figure F1. Alternative Ordering of the VAR - Linear Model.
   + Figure F2. Alternative Ordering of the VAR - Threshold Model.
   + Figure F3. Enriching the Information Set with More Factors.
+  + Figure F4. Internal Instrument Approach - Linear Model.
+  + Figure F5. Internal Instrument Approach - Threshold Model.
 
 - Tables:
   + Table E1. Convergence Statistics.
 
-**Abstract** This paper investigates the role of credit market sentiments and investor beliefs on credit cycle dynamics and their propagation to business cycle fluctuations. Using US data from 1968 to 2014, we show that credit market sentiments are indeed able to detect asymmetries in a small-scale macroeconomic model. By exploiting recent developments in behavioral finance on expectation formation in financial markets, we are able to identify an unexpected credit market news shock exhibiting different impacts in an optimistic and pessimistic credit market environment. While an unexpected movement in the optimistic regime leads to a rather low to muted impact on output and credit, we find a significant and persistent negative impact on those variables in the pessimistic regime. Therefore, this article departs from the current literature on the role of financial frictions for explaining business cycle behavior in macroeconomics and argues in line with recent theoretical contributions on the relevance of expectation formation mechanisms as a source of macroeconomic instability.
+**Abstract** This paper investigates the role of credit market sentiments and investor beliefs on credit cycle dynamics and their propagation to business cycle fluctuations. Using US data from 1968 to 2014, we find that credit market sentiments are indeed able to detect asymmetries in a small-scale macroeconomic model. An unexpected credit market news shock exhibits different impacts in an optimistic and pessimistic credit market environment. While an unexpected movement in the optimistic regime leads to a rather low to muted impact on output and credit, we find a significant negative impact on those variables in the pessimistic regime. The findings highlight the relevance of expectation formation mechanisms as a source of macroeconomic instability.
 
-**Links** [WU Working Paper](https://epub.wu.ac.at/7087/)
+**Links** [(Latest Version Dec 2022)](https://www.dropbox.com/s/2jjddl5v04iqhb8/BZ2022.pdf) [(WU Working Paper Jul 2019)](https://epub.wu.ac.at/7087/)

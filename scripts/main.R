@@ -4,14 +4,14 @@
 # The Impact of Credit Market Sentiments                                        #
 #                                                                               #
 # Maximilian Boeck, Vienna School of International Studies                      #
-# Created: 02/05/2021                                                           #
-# Last Edit: 12/11/2022                                                         #
+# Created:   02/05/2021                                                         #
+# Last Edit: 17/07/2023                                                         #
 #-------------------------------------------------------------------------------#
 rm(list=ls())
 set.seed(571)
 
 # set working directory - delete this later
-setwd("/users/mboeck/dropbox/projects/!Credit Sentiments/replication-creditsentiments")
+setwd("/users/mboeck/dropbox/projects/!credit-sentiments/replication-creditsentiments")
 
 # 1) Load Stuff / Settings
 source("./scripts/aux.R")
@@ -177,7 +177,7 @@ if(file.exists(paste0("./saves/est_thrshintinstr_diff=",diff,"_plag=",plag,"_sca
 ## Figure 1                       ##
 ####################################
 
-png("./figure1.png", type = "cairo", width = width, height = height_higher, res = 300)
+png("./MS19-470Fig1.png", type = "cairo", width = width, height = height_higher, res = 300)
 par(fig = c(0,1,0,1), mfrow=c(1,1), mar=c(3,2,1,1))
 baat10_plot = dataset_est$BAAT10[(diff+1):nrow(dataset_est)]
 plot.ts(baat10_plot, xaxt="n", yaxt="n",
@@ -208,7 +208,7 @@ dev.off()
 ## Figure 2                       ##
 ####################################
 
-png("./figure2a.png", type = "cairo", width = width, height = height/2, res = 300)
+png("./MS19-470Fig2a.png", type = "cairo", width = width, height = height/2, res = 300)
 par(mfrow=c(1,M), mar=c(2.2,3,2,1))
 for(mm in 1:M){
   plot.ts(irfvar_ext[4,mm,], col = "black", ylim = range(irfvar_ext[,mm,]),
@@ -229,7 +229,7 @@ for(mm in 1:M){
 }
 dev.off()
 
-png("./figure2b.png", type = "cairo", width = width, height = height/2, res = 300)
+png("./MS19-470Fig2b.png", type = "cairo", width = width, height = height/2, res = 300)
 par(mfrow=c(1,M), mar=c(2.2,3,2,1))
 for(mm in 1:M){
   plot.ts(irfvar_chol[4,mm,], col = "black", ylim = range(irfvar_chol[,mm,]),
@@ -254,7 +254,7 @@ dev.off()
 ## Figure 3                       ##
 ####################################
 
-png("./figure3.png", type = "cairo", width = width, height = height_higher, res = 300)
+png("./MS19-470Fig3.png", type = "cairo", width = width, height = height_higher, res = 300)
 len <- nrow(run_tvar$args$Zraw[-c(1:plag),,drop=FALSE])
 regmat <- matrix(NA, len, 4)
 colnames(regmat) <- c("xstart","ystart","xend","yend")
@@ -283,7 +283,7 @@ dev.off()
 ## Figure 4                       ##
 ####################################
 
-png("./figure4.png", type = "cairo", width = width, height = height, res = 300)
+png("./MS19-470Fig4.png", type = "cairo", width = width, height = height, res = 300)
 par(mfrow=c(h,M), mar = c(2.2,3,2,1))
 for(hh in 1:h){
   for(mm in 1:M) {
@@ -314,7 +314,7 @@ dev.off()
 ## Figure 5                       ##
 ####################################
 
-png("./figure5.png", type = "cairo", width = width, height = height, res = 300)
+png("./MS19-470Fig5.png", type = "cairo", width = width, height = height, res = 300)
 par(mfrow=c(h,M), mar = c(2.2,3,2,1))
 for(hh in 1:h){
   for(mm in 1:M) {
@@ -347,7 +347,7 @@ dev.off()
 
 # regime 1
 
-png("./figure6.png", type = "cairo", width = width, height = height_higher, res = 300)
+png("./MS19-470Fig6.png", type = "cairo", width = width, height = height_higher, res = 300)
 par(mfrow=c(r-1,M-1), mar=c(2,2,2,1))
 heur  <- c("RE","ADA", "WTR", "STR", "LAA")
 for(rr in 2:r){
@@ -368,7 +368,7 @@ dev.off()
 
 # regime 2 - no differences as pointed out in the paper
 
-# png("./figure6_regime2.png", type = "cairo", width = width, height = height_higher, res = 300)
+# png("./MS19-470Fig6_regime2.png", type = "cairo", width = width, height = height_higher, res = 300)
 # par(mfrow=c(r-1,M-1), mar=c(2,2,2,1))
 # heur  <- c("RE","ADA", "WTR", "STR", "LAA")
 # for(rr in 2:r){
@@ -391,7 +391,7 @@ dev.off()
 ## Figure 7                       ##
 ####################################
 
-png("./figure7.png", type = "cairo", width = width, height = height, res = 300)
+png("./MS19-470Fig7.png", type = "cairo", width = width, height = height, res = 300)
 par(mfrow=c(h,M), mar = c(2.2,3,2,1))
 for(hh in 1:h){
   for(mm in 1:M) {
@@ -431,7 +431,7 @@ dev.off()
 ## Figure F1                      ##
 ####################################
 
-png("./figuref1.png", type = "cairo", width = width, height = height/2, res = 300)
+png("./MS19-470FigF1.png", type = "cairo", width = width, height = height/2, res = 300)
 par(mfrow=c(1,M), mar=c(2.2,2,2,1))
 for(mm in 1:M){
   plot.ts(irfvarrob_chol[[2]][4,mm,], col = "black", ylim = range(irfvarrob_chol[[2]][,mm,]),
@@ -456,7 +456,7 @@ dev.off()
 ## Figure F2                      ##
 ####################################
 
-png("./figuref2.png", type = "cairo", width = width, height = height, res = 300)
+png("./MS19-470FigF2.png", type = "cairo", width = width, height = height, res = 300)
 par(mfrow=c(h,M), mar = c(2.2,3,2,1))
 for(hh in 1:h){
   for(mm in 1:M) {
@@ -487,7 +487,7 @@ dev.off()
 ## Figure F3                      ##
 ####################################
 
-png("./figuref3.png", type = "cairo", width = width, height = height, res = 300)
+png("./MS19-470FigF3.png", type = "cairo", width = width, height = height, res = 300)
 par(mfrow=c(h,M), mar = c(2.2,3,2,1))
 for(hh in 1:h){
   for(mm in 1:M) {
@@ -529,7 +529,7 @@ dev.off()
 
 varnames_plot_int <- c("Instrument",varnames_plot)
 
-png("./figuref4.png", type = "cairo", width = width, height = height/2, res = 300)
+png("./MS19-470FigF4.png", type = "cairo", width = width, height = height/2, res = 300)
 par(mfrow=c(1,M+1), mar=c(2.2,3,2,1))
 for(mm in 1:(M+1)){
   plot.ts(irfvar_int[4,mm,], col = "black", ylim = range(irfvar_int[,mm,]),
@@ -556,7 +556,7 @@ dev.off()
 
 varnames_plot_int <- c("Instrument",varnames_plot)
 
-png("./figuref5.png", type = "cairo", width = width, height = height, res = 300)
+png("./MS19-470FigF5.png", type = "cairo", width = width, height = height, res = 300)
 par(mfrow=c(h,M+1), mar = c(2.2,3,2,1))
 for(hh in 1:h){
   for(mm in 1:(M+1)) {
