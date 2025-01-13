@@ -3,7 +3,7 @@
 
 Replication files for Boeck, M. and Zörner, T. O. (2023)
 =======
-Replication files for Boeck, M. and Zörner, T. O. (2023) *The Impact of Credit Market Sentiment Shocks*, Journal of Money, Credit and Banking, forthcoming.
+Replication files for Boeck, M. and Zörner, T. O. (2024) *The Impact of Credit Market Sentiment Shocks*, Journal of Money, Credit and Banking, Vol. 56(7), pp. 1645-1673.
 
 In order to reproduce all the graphics visible in the paper, just run **main.r** in the *scripts* folder. Estimations are based on 25.000 MCMC draws where the first 15.000 are discarded. Hence, the script takes a considerable amount of time to run through. The number of saved draws (*draws*) and discarded draws (*burnins*) can be adapted by the user. The script then reproduces the following
 
