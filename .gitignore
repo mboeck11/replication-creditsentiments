@@ -9,6 +9,7 @@ saves/*.RData
 
 .Renviron
 
-.gitignore
+# do not commit gitignore
+/.gitignore
 
 .DS_store
