@@ -1,7 +1,7 @@
 # replication-creditsentiments
 
 
-Replication files for Boeck, M. and Zörner, T. O. (2023)
+Replication files for Boeck, M. and Zörner, T. O. (2024)
 =======
 Replication files for Boeck, M. and Zörner, T. O. (2024) *The Impact of Credit Market Sentiment Shocks*, Journal of Money, Credit and Banking, Vol. 56(7), pp. 1645-1673.
 
